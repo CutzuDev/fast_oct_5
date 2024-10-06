@@ -1,0 +1,17 @@
+<svg id="bandarbountiesicon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22.139" height="25.298" viewBox="0 0 22.139 25.298">
+  <defs>
+    <radialGradient id="radial-gradient" cx="-0.143" cy="0.831" r="1.116" gradientTransform="translate(0 -0.308) scale(1 1.498)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#faa418"/>
+      <stop offset="0.3" stop-color="#f95b67"/>
+      <stop offset="0.646" stop-color="#cc49ce"/>
+      <stop offset="1" stop-color="#6cf2ec"/>
+    </radialGradient>
+    <clipPath id="clip-path">
+      <rect id="Rectángulo_95" data-name="Rectángulo 95" width="22.139" height="25.298" fill="url(#radial-gradient)"/>
+    </clipPath>
+    <radialGradient id="radial-gradient-2" cx="-0.143" cy="0.831" r="1.61" gradientTransform="matrix(0.688, -0.726, 1.229, 1.165, -1.066, -0.241)" xlink:href="#radial-gradient"/>
+  </defs>
+  <g id="Grupo_597" data-name="Grupo 597" clip-path="url(#clip-path)">
+    <path id="Trazado_225" data-name="Trazado 225" d="M20.134,12.5l1.045-.447V4.427L17.617,0H0V25.3H17.675a.844.844,0,0,0,.607-.228c.365-.316.756-.612,1.134-.919s.751-.618,1.127-.925.727-.588,1.091-.884l.5-.411V14.915Zm-6.891,7.431-.03.03a.049.049,0,0,1-.024.013,1.59,1.59,0,0,1-.168.013H8.241c-.016,0-.033-.016-.049-.024-.046-.2-.06-4.56-.017-4.939l.021-.019A.057.057,0,0,1,8.219,15c.055,0,.112-.013.168-.013h4.781c.016,0,.033.014.074.033Zm.008-10.32-.036.036s-.014.014-.022.014L8.3,9.675a1.019,1.019,0,0,1-.131-.017V5.338c.217-.049,4.615-.066,5.067-.019.03.715.009,1.433.013,2.152s.006,1.445.006,2.15Z" fill="url(#radial-gradient-2)"/>
+  </g>
+</svg>
