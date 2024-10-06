@@ -3,7 +3,7 @@ import { Button } from "../ui/button";
 
 export default function Nav() {
   return (
-    <nav className="absolute left-0 top-0 flex h-20 w-full items-center justify-center">
+    <nav className="fixed left-0 top-0 z-50 flex h-20 w-full items-center justify-center bg-gradient-to-b from-white via-white/[95%] via-75% to-transparent">
       <div className="flex w-full max-w-[1200px] items-center justify-between px-4">
         <div className="flex items-center justify-center gap-8">
           <div className="mb-1 flex items-center justify-center gap-2">

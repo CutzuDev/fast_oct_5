@@ -65,7 +65,7 @@ export default function Hero() {
           particleColor="#FFFFFF"
         />
       </div>
-      <div className="absolute left-[45%] top-[45%] z-[-100] flex h-[100vh] w-[100vw] -translate-x-1/2 -translate-y-1/2 items-center justify-center overflow-hidden blur-2xl">
+      <div className="absolute left-[45%] top-[45%] z-[-100] flex h-[100vh] opacity-75 w-[100vw] -translate-x-1/2 -translate-y-1/2 items-center justify-center overflow-hidden blur-2xl">
         <Image className="scale-150" src={"/hero/gradient.svg"} alt="" fill />
       </div>
     </section>

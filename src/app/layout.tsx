@@ -8,6 +8,7 @@ export const metadata: Metadata = {
 
 import { Inter } from "next/font/google";
 import Nav from "@/components/sections/nav";
+import Footer from "@/components/sections/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body className={`${inter.className} antialiased`}>
         <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   );

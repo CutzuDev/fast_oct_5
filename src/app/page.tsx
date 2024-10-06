@@ -3,6 +3,8 @@ import Hero from "./sections/hero";
 import Future from "@/app/sections/future";
 import Companies from "./sections/companies";
 import Pricing from "./sections/pricing";
+import Grid from "./sections/grid";
+import FAQ from "./sections/faq";
 
 export default function Home() {
   return (
@@ -12,6 +14,8 @@ export default function Home() {
       <Future />
       <Companies />
       <Pricing />
+      <Grid />
+      <FAQ />
     </div>
   );
 }

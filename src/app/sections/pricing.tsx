@@ -71,14 +71,14 @@ export default function Pricing() {
             <TabsTrigger value="correct">The correct choice</TabsTrigger>
           </TabsList>
           <TabsContent value="wrong">
-            <div className="absolute left-0 top-0 -z-10 h-full w-full bg-gradient-to-r from-black via-white to-black opacity-75 blur-3xl" />
+            <div className="absolute left-0 top-0 -z-10 h-full w-full bg-gradient-to-r from-black via-neutral-400/25 to-black opacity-75 blur-3xl" />
             <ChoiceCard {...list[0]} />
           </TabsContent>
           <TabsContent
             className="flex flex-wrap items-stretch justify-center gap-4"
             value="correct"
           >
-            <div className="absolute left-0 top-0 -z-10 h-full w-full bg-gradient-to-r from-yellow-300 via-pink-400 to-blue-400 opacity-65 blur-3xl" />
+            <div className="absolute left-0 top-0 -z-10 h-full w-full bg-gradient-to-r from-yellow-300 via-pink-400/75 to-blue-400 opacity-75 blur-3xl" />
             <ChoiceCard {...list[1]} />
             <ChoiceCard {...list[2]} />
           </TabsContent>
