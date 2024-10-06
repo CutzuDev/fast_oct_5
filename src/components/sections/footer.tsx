@@ -16,14 +16,14 @@ export default function Footer() {
           );
         })}
       </div>
-      <div className="flex items-center justify-center gap-8">
+      <div className="flex items-center flex-wrap justify-center gap-8">
         <span>Features</span>
         <span>Stilelist</span>
         <span>Pricing</span>
         <span>Reviews</span>
         <span>FAQs</span>
       </div>
-      <div className="flex items-center justify-center gap-8 text-sm text-black/25">
+      <div className="flex items-center flex-wrap justify-center gap-8 text-sm text-black/25">
         <span>Privacy Policy</span>
         <span>Terms & Conditions</span>
         <span>Refund Policy</span>
