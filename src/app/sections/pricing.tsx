@@ -12,7 +12,7 @@ type cardProps = {
   list: string[];
   buttonText: string;
 };
-export default function Choice() {
+export default function Pricing() {
   const list: cardProps[] = [
     {
       name: "The Wrong Choice",
@@ -55,9 +55,9 @@ export default function Choice() {
     },
   ];
   return (
-    <section className="flex relative justify-center mt-40 p-4 items-center w-full flex-col">
-      <div className="flex justify-center items-center text-center gap-4 flex-col">
-        <span className="text-5xl lg:text-7xl max-w-[900px] font-bold">
+    <section className="relative mt-20 flex w-full flex-col items-center justify-center p-4 md:mt-40">
+      <div className="flex flex-col items-center justify-center gap-4 text-center">
+        <span className="max-w-[900px] text-5xl font-bold lg:text-7xl">
           Decide your future today and transform your life.
         </span>
         <span className="max-w-[700px] text-sm">
@@ -65,18 +65,20 @@ export default function Choice() {
           <br /> Make the choice now and turn your dreams into reality. The
           power is in your hands.
         </span>
-        <Tabs defaultValue="correct" className="min-w-[400px]">
+        <Tabs defaultValue="correct" className="">
           <TabsList>
             <TabsTrigger value="wrong">The wrong choice</TabsTrigger>
             <TabsTrigger value="correct">The correct choice</TabsTrigger>
           </TabsList>
           <TabsContent value="wrong">
+            <div className="absolute left-0 top-0 -z-10 h-full w-full bg-gradient-to-r from-black via-white to-black opacity-75 blur-3xl" />
             <ChoiceCard {...list[0]} />
           </TabsContent>
           <TabsContent
-            className="flex justify-center items-stretch flex-wrap gap-4"
+            className="flex flex-wrap items-stretch justify-center gap-4"
             value="correct"
           >
+            <div className="absolute left-0 top-0 -z-10 h-full w-full bg-gradient-to-r from-yellow-300 via-pink-400 to-blue-400 opacity-65 blur-3xl" />
             <ChoiceCard {...list[1]} />
             <ChoiceCard {...list[2]} />
           </TabsContent>
@@ -95,28 +97,31 @@ function ChoiceCard({
   buttonText,
 }: cardProps) {
   return (
-    <div id="uh" className="bg-white w-full md:w-auto border rounded-sm p-4">
-      <div className="bg-neutral-100 text-center flex-col rounded-sm p-2 flex justify-center items-center">
-        <span className="text-lg ">{name}</span>
-        <span className="text-xs mt-4">starts at</span>
+    <div
+      id="pricing"
+      className="w-full rounded-lg border border-neutral-600/50 bg-white p-4 md:w-auto"
+    >
+      <div className="flex flex-col items-center justify-center rounded-sm bg-neutral-100 p-2 text-center">
+        <span className="text-lg">{name}</span>
+        <span className="mt-4 text-xs">starts at</span>
         {image && (
-          <div className="w-full max-w-32 relative aspect-square">
+          <div className="relative aspect-square w-full max-w-32">
             <Image alt="" fill src={image} />
           </div>
         )}
-        {price && <span className="text-4xl font-semibold mt-2">${price}</span>}
+        {price && <span className="mt-2 text-4xl font-semibold">${price}</span>}
         <span>billed monthly</span>
-        <span className="text-sm w-3/5 mt-6">{description}</span>
-        <Button className="w-full mt-6">{buttonText}</Button>
+        <span className="mt-6 w-3/5 text-sm">{description}</span>
+        <Button className="mt-6 w-full">{buttonText}</Button>
       </div>
-      <div className=" flex justify-center items-start flex-col gap-4 mt-6">
+      <div className="mt-6 flex flex-col items-start justify-center gap-4">
         {list.map((e, i) => {
           return (
-            <div key={i} className="flex justify-center items-center gap-2">
+            <div key={i} className="flex items-center justify-center gap-2">
               {price ? (
-                <Check className="bg-green-200 rounded-sm p-1" size={22} />
+                <Check className="rounded-sm bg-green-200 p-1" size={22} />
               ) : (
-                <X className="bg-green-200 rounded-sm p-1" size={22} />
+                <X className="rounded-sm bg-green-200 p-1" size={22} />
               )}
               <span>{e}</span>
             </div>

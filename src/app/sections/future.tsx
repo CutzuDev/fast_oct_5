@@ -40,9 +40,9 @@ export default function Future() {
     },
   ];
   return (
-    <section className="flex justify-center items-center mt-40 p-4 flex-col">
-      <div className="flex justify-center items-center text-center gap-4 flex-col">
-        <span className="text-5xl lg:text-7xl max-w-[900px] font-bold">
+    <section className="mt-20 flex flex-col items-center justify-center p-4 md:mt-40">
+      <div className="flex flex-col items-center justify-center gap-4 text-center">
+        <span className="max-w-[900px] text-5xl font-bold lg:text-7xl">
           Decide your future today and transform your life.
         </span>
         <span className="max-w-[700px] text-sm">
@@ -52,14 +52,14 @@ export default function Future() {
           life. Take control and embrace your potential.
         </span>
       </div>
-      <div className=" flex flex-wrap justify-center items-stretch gap-4 max-w-[1300px] mt-10">
+      <div className="mt-10 flex max-w-[1300px] flex-wrap items-stretch justify-center gap-4">
         {list.map((e, i) => {
           return (
             <div
               key={i}
-              className="p-4 border flex justify-center gap-2 items-start flex-col border-neutral-800/10 max-w-[400px] rounded-md"
+              className="flex max-w-[400px] flex-col items-start justify-center gap-2 rounded-md border border-neutral-800/10 p-4"
             >
-              <div className="h-10 relative aspect-square">
+              <div className="relative aspect-square h-10">
                 <Image fill alt="" src={`/features/${e.image}.png`} />
               </div>
               <span className="text-lg">{e.title}</span>

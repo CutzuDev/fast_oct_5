@@ -25,21 +25,21 @@ export default function Companies() {
   ];
 
   return (
-    <section className="flex justify-center mt-40 items-center w-full p-4 flex-col">
-      <div className="flex justify-center items-start">
-        <div className="lg:flex hidden justify-center items-center gap-8 flex-col">
+    <section className="mt-40 flex w-full flex-col items-center justify-center p-4">
+      <div className="flex items-start justify-center">
+        <div className="hidden flex-col items-center justify-center gap-8 lg:flex">
           {[...list.slice(0, 3), list[6], list[12]].map((e, i) => {
             return (
-              <div className="relative h-16 aspect-[21/9] ">
+              <div className="relative aspect-[21/9] h-16">
                 <Image src={`/rlogo/${e}.svg`} fill alt="" />
               </div>
             );
           })}
         </div>
 
-        <div className="flex justify-end h-full items-center flex-col max-w-[900px] gap-9">
-          <div className="flex shadow-[0_25px_100px_50px_rgba(255,255,255,1)] z-10 justify-center items-center max-w-[900px] flex-col text-center gap-4">
-            <span className="text-5xl lg:text-7xl max-w-[900px] font-bold">
+        <div className="flex h-full max-w-[900px] flex-col items-center justify-end gap-9">
+          <div className="z-10 flex max-w-[900px] flex-col items-center justify-center gap-4 text-center shadow-[0_25px_100px_50px_rgba(255,255,255,1)]">
+            <span className="max-w-[900px] text-5xl font-bold lg:text-7xl">
               Relentlessly tracking every movement.
             </span>
             <span className="max-w-[700px] text-sm">
@@ -49,12 +49,12 @@ export default function Companies() {
             </span>
             <Button className="px-8">Get started</Button>
           </div>
-          <div className="flex justify-center flex-wrap items-center gap-8">
+          <div className="flex flex-wrap items-center justify-center gap-8">
             {[...list.slice(7, 11), ...list.slice(13, 17)].map((e, i) => {
               return (
                 <div
                   key={i}
-                  className="relative md:block hidden h-16 w-1/5 aspect-[21/9] "
+                  className="relative hidden aspect-[21/9] h-16 w-1/5 md:block"
                 >
                   <Image src={`/rlogo/${e}.svg`} fill alt="" />
                 </div>
@@ -64,7 +64,7 @@ export default function Companies() {
               return (
                 <div
                   key={i}
-                  className="relative md:hidden block h-16 w-1/3 aspect-[21/9] "
+                  className="relative block aspect-[21/9] h-16 w-1/3 md:hidden"
                 >
                   <Image src={`/rlogo/${e}.svg`} fill alt="" />
                 </div>
@@ -72,10 +72,10 @@ export default function Companies() {
             })}
           </div>
         </div>
-        <div className="lg:flex hidden justify-center items-center gap-8 flex-col">
+        <div className="hidden flex-col items-center justify-center gap-8 lg:flex">
           {[...list.slice(3, 6), list[11], list[17]].map((e, i) => {
             return (
-              <div className="relative h-16 aspect-[21/9] ">
+              <div className="relative aspect-[21/9] h-16">
                 <Image src={`/rlogo/${e}.svg`} fill alt="" />
               </div>
             );
