@@ -112,7 +112,7 @@ function ChoiceCard({
       <div className=" flex justify-center items-start flex-col gap-4 mt-6">
         {list.map((e, i) => {
           return (
-            <div className="flex justify-center items-center gap-2">
+            <div key={i} className="flex justify-center items-center gap-2">
               {price ? (
                 <Check className="bg-green-200 rounded-sm p-1" size={22} />
               ) : (

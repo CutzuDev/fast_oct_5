@@ -1,6 +1,4 @@
-"use client";
 import { Button } from "@/components/ui/button";
-import useWindowDimensions from "@/lib/useWindowDimensions";
 
 import Image from "next/image";
 
@@ -26,22 +24,19 @@ export default function Companies() {
     "petco", //18
   ];
 
-  const { width, height } = useWindowDimensions();
-  console.log(width);
   return (
     <section className="flex justify-center mt-40 items-center w-full p-4 flex-col">
       <div className="flex justify-center items-start">
-        {width > 768 && (
-          <div className="flex justify-center items-center gap-8 flex-col">
-            {[...list.slice(0, 3), list[6], list[12]].map((e, i) => {
-              return (
-                <div className="relative h-16 aspect-[21/9] ">
-                  <Image src={`/rlogo/${e}.svg`} fill alt="" />
-                </div>
-              );
-            })}
-          </div>
-        )}
+        <div className="lg:flex hidden justify-center items-center gap-8 flex-col">
+          {[...list.slice(0, 3), list[6], list[12]].map((e, i) => {
+            return (
+              <div className="relative h-16 aspect-[21/9] ">
+                <Image src={`/rlogo/${e}.svg`} fill alt="" />
+              </div>
+            );
+          })}
+        </div>
+
         <div className="flex justify-end h-full items-center flex-col max-w-[900px] gap-9">
           <div className="flex shadow-[0_25px_100px_50px_rgba(255,255,255,1)] z-10 justify-center items-center max-w-[900px] flex-col text-center gap-4">
             <span className="text-5xl lg:text-7xl max-w-[900px] font-bold">
@@ -55,34 +50,37 @@ export default function Companies() {
             <Button className="px-8">Get started</Button>
           </div>
           <div className="flex justify-center flex-wrap items-center gap-8">
-            {width > 768
-              ? [...list.slice(7, 11), ...list.slice(13, 17)].map((e, i) => {
-                  return (
-                    <div className="relative h-16 w-1/5 aspect-[21/9] ">
-                      <Image src={`/rlogo/${e}.svg`} fill alt="" />
-                    </div>
-                  );
-                })
-              : list.map((e, i) => {
-                  return (
-                    <div className="relative h-16 w-full xs:w-1/3 aspect-[21/9] ">
-                      <Image src={`/rlogo/${e}.svg`} fill alt="" />
-                    </div>
-                  );
-                })}
-          </div>
-        </div>
-        {width > 768 && (
-          <div className="flex justify-center items-center gap-8 flex-col">
-            {[...list.slice(3, 6), list[11], list[17]].map((e, i) => {
+            {[...list.slice(7, 11), ...list.slice(13, 17)].map((e, i) => {
               return (
-                <div className="relative h-16 aspect-[21/9] ">
+                <div
+                  key={i}
+                  className="relative md:block hidden h-16 w-1/5 aspect-[21/9] "
+                >
+                  <Image src={`/rlogo/${e}.svg`} fill alt="" />
+                </div>
+              );
+            })}
+            {list.map((e, i) => {
+              return (
+                <div
+                  key={i}
+                  className="relative md:hidden block h-16 w-1/3 aspect-[21/9] "
+                >
                   <Image src={`/rlogo/${e}.svg`} fill alt="" />
                 </div>
               );
             })}
           </div>
-        )}
+        </div>
+        <div className="lg:flex hidden justify-center items-center gap-8 flex-col">
+          {[...list.slice(3, 6), list[11], list[17]].map((e, i) => {
+            return (
+              <div className="relative h-16 aspect-[21/9] ">
+                <Image src={`/rlogo/${e}.svg`} fill alt="" />
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
