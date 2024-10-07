@@ -53,7 +53,7 @@ export default function Companies() {
 
   return (
     <section className="mt-40 flex w-full flex-col items-center justify-center p-4">
-      <div className="flex w-full flex-col items-center justify-center lg:items-start">
+      <div className="flex w-full flex-col items-center justify-center lg:flex-row lg:items-start">
         <div className="hidden flex-col items-center justify-center gap-8 lg:flex">
           {[...list.slice(0, 3), list[6], list[12]].map((e, i) => {
             return (
@@ -108,7 +108,7 @@ export default function Companies() {
               stopOnInteraction: false,
             }),
           ]}
-          className="flex mt-10 w-full lg:hidden"
+          className="mt-10 flex w-full lg:hidden"
           opts={{ loop: true, align: "center" }}
         >
           <CarouselContent>

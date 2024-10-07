@@ -102,7 +102,7 @@ export default function Featured() {
           })}
         </CarouselContent>
       </Carousel>
-      <div className="flex w-full max-w-[600px] items-center justify-center gap-2 py-2">
+      <div className="flex w-full max-w-[600px] items-center justify-center gap-2 py-2 lg:hidden">
         {/* Slide {current} of {count} */}
         {new Array(count + 1).fill(0, 1, count + 1).map((e, index) => {
           return (
