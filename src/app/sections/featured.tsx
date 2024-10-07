@@ -8,6 +8,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import AutoScroll from "embla-carousel-auto-scroll";
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -75,8 +76,8 @@ export default function Featured() {
       <Carousel
         setApi={setApi}
         plugins={[
-          Autoplay({
-            delay: 1500,
+          AutoScroll({
+            playOnInit: true,
           }),
         ]}
         className="w-full max-w-[900px] px-10"

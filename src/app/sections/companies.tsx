@@ -7,6 +7,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import AutoScroll from "embla-carousel-auto-scroll";
 import Autoplay from "embla-carousel-autoplay";
 
 import Image from "next/image";
@@ -52,7 +53,9 @@ export default function Companies() {
   }, [api]);
 
   return (
-    <section className="mt-40 flex w-full flex-col items-center justify-center p-4">
+    <section className="relative mt-40 flex w-full flex-col items-center justify-center p-4">
+      <div id="sitelist" className="absolute -top-[10%] left-0" />
+
       <div className="flex w-full flex-col items-center justify-center lg:flex-row lg:items-start">
         <div className="hidden flex-col items-center justify-center gap-8 lg:flex">
           {[...list.slice(0, 3), list[6], list[12]].map((e, i) => {
@@ -103,18 +106,17 @@ export default function Companies() {
         <Carousel
           setApi={setApi}
           plugins={[
-            Autoplay({
-              delay: 1500,
-              stopOnInteraction: false,
+            AutoScroll({
+              playOnInit: true,
             }),
           ]}
-          className="mt-10 flex w-full lg:hidden"
+          className="mt-10 flex w-full max-w-[600px] lg:hidden"
           opts={{ loop: true, align: "center" }}
         >
           <CarouselContent>
             {[...list.slice(3, 6), list[11], list[17]].map((e, i) => {
               return (
-                <CarouselItem className="flex basis-[100%] items-center justify-center">
+                <CarouselItem className="flex basis-1/3 items-center justify-center">
                   <div className="relative aspect-[21/9] h-16">
                     <Image src={`/rlogo/${e}.svg`} fill alt="" />
                   </div>

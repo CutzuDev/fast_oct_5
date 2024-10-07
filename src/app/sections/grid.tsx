@@ -1,10 +1,13 @@
 import { Card, LayoutGrid } from "@/components/ui/layout-grid";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Grid() {
   return (
     <section className="relative mt-20 flex w-full flex-col items-center justify-center gap-10 p-4 md:mt-40">
+      <div id="reviews" className="absolute -top-[10%] left-0" />
+
       <div className="flex flex-col items-center justify-center gap-4 text-center">
         <span className="max-w-[900px] text-5xl font-bold lg:text-7xl">
           Hear the buzz from our community.
@@ -64,13 +67,17 @@ const gridCardList: gridCardProps[] = [
   {
     content: (
       <>
-        <div className="flex h-full flex-col items-center justify-between">
+        <Link
+          href={""}
+          target="_blank"
+          className="flex h-full flex-col items-center justify-between"
+        >
           <span className="w-full text-3xl font-bold">bandar's bounties</span>
           <span className="mb-10 w-full text-xl font-semibold">
             "KSI x Logan Paul's Prime Hydration Brand just accidentally gave
             away 250,283 boxes of PRIME Hydration Sticks for FREE. 100% OFF."
           </span>
-        </div>
+        </Link>
         <div className="absolute left-0 top-0 -z-[9] h-full w-full rounded-lg bg-gradient-to-tl from-purple-500 to-transparent to-35%" />
         <div className="absolute left-0 top-0 -z-10 h-full w-full rounded-lg bg-gradient-to-tr from-amber-500 from-10% via-pink-500 to-cyan-300 to-85%" />
       </>
@@ -90,7 +97,13 @@ const gridCardList: gridCardProps[] = [
   },
   {
     content: (
-      <div className="flex h-full w-full flex-col items-start justify-between">
+      <Link
+        href={
+          "https://www.sportskeeda.com/mma/news-dillon-danistrolls-bone-heads-ksi-logan-paul-prime-hydration-brand-accidentallygives-away-250-000-boxes-products-free"
+        }
+        target="_blank"
+        className="flex h-full w-full flex-col items-start justify-between"
+      >
         <svg
           className=""
           xmlns="http://www.w3.org/2000/svg"
@@ -110,7 +123,7 @@ const gridCardList: gridCardProps[] = [
           hydration brand accidentally gives away over 250,000 boxes of products
           for free"
         </span>
-      </div>
+      </Link>
     ),
     user: { name: "hibbster32", date: "Member since November 2023" },
     image: "/testimonial/profilepicture5.png",
