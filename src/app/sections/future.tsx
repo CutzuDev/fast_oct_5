@@ -1,4 +1,13 @@
+"use client";
 import Image from "next/image";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 export default function Future() {
   const list: { image: string; title: string; description: string }[] = [
@@ -40,7 +49,7 @@ export default function Future() {
     },
   ];
   return (
-    <section className="mt-20 flex flex-col items-center justify-center p-4 md:mt-40">
+    <section className="mt-20 flex w-full flex-col items-center justify-center gap-10 p-4 md:mt-40">
       <div className="flex flex-col items-center justify-center gap-4 text-center">
         <span className="max-w-[900px] text-5xl font-bold lg:text-7xl">
           Decide your future today and transform your life.
@@ -52,7 +61,7 @@ export default function Future() {
           life. Take control and embrace your potential.
         </span>
       </div>
-      <div className="mt-10 flex max-w-[1300px] flex-wrap items-stretch justify-center gap-4">
+      <div className="mt-10 hidden max-w-[1300px] flex-wrap items-stretch justify-center gap-4 lg:flex">
         {list.map((e, i) => {
           return (
             <div
@@ -68,6 +77,37 @@ export default function Future() {
           );
         })}
       </div>
+      <Carousel
+        plugins={[
+          Autoplay({
+            delay: 1500,
+            stopOnInteraction: false,
+          }),
+        ]}
+        className="flex w-full lg:hidden"
+        opts={{ loop: true }}
+      >
+        <CarouselContent>
+          {list.map((e, i) => {
+            return (
+              <CarouselItem className="basis-[100%]">
+                <div
+                  key={i}
+                  className="flex max-w-[400px] flex-col items-start justify-center gap-2 rounded-md border border-neutral-800/10 p-4"
+                >
+                  <div className="relative aspect-square h-10">
+                    <Image fill alt="" src={`/features/${e.image}.png`} />
+                  </div>
+                  <span className="text-lg">{e.title}</span>
+                  <span className="text-sm">{e.description}</span>
+                </div>
+              </CarouselItem>
+            );
+          })}
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
     </section>
   );
 }

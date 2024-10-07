@@ -1,3 +1,13 @@
+"use client";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+
 import Image from "next/image";
 
 export default function Featured() {
@@ -42,25 +52,37 @@ export default function Featured() {
   ];
 
   return (
-    <section className="gap-6a flex w-full flex-col items-center justify-center">
+    <section className="flex w-full flex-col items-center justify-center gap-6">
       <span>As featured on</span>
-      <div className="flex flex-col items-center justify-center gap-0 lg:flex-row lg:gap-10">
-        {list.map((e, i) => {
-          return (
-            <div onClick={(e)} className="relative aspect-[21/6] h-12">
-              {/* <div className="bg-gradient-to-tl from-blue-400 via-pink-500 to-yellow-300 w-full h-1/2 absolute left-0 top-1/2 -translate-y-1/2 mix-blend-" /> */}
-              <Image className="" alt="" src={`/aso/${e.image}.svg`} fill />
-              {/* <div>
-                <img
-                  src="/hero/gradient.svg"how to
-                  className="scale-x-[2.5] scale-y-[1.5] mix-blend-multiply  -rotate-12 absolute bg-clip-cli -right-10 top-0"
-                  alt=""
-                />
-              </div> */}
-            </div>
-          );
-        })}
-      </div>
+      <Carousel
+        plugins={[
+          Autoplay({
+            delay: 1500,
+            stopOnInteraction: false,
+          }),
+        ]}
+        className="w-full max-w-[900px] px-10"
+        opts={{ loop: true }}
+      >
+        <CarouselContent>
+          {list.map((e, i) => {
+            return (
+              <CarouselItem
+                onClick={(a) => {
+                  e.link.forEach((item) => {
+                    window.open(item, "_blank");
+                  });
+                }}
+                className="pl-10 hover:cursor-pointer md:basis-1/2 lg:basis-1/3"
+              >
+                <div className="relative aspect-video w-full object-contain">
+                  <Image className="" alt="" src={`/aso/${e.image}.svg`} fill />
+                </div>
+              </CarouselItem>
+            );
+          })}
+        </CarouselContent>
+      </Carousel>
     </section>
   );
 }
