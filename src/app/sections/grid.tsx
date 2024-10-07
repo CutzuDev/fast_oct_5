@@ -17,7 +17,7 @@ export default function Grid() {
       </div>
       <div className="grid w-full max-w-[1200px] grid-cols-1 grid-rows-4 gap-4 md:grid-cols-3">
         {gridCardList.map((item, i) => {
-          return <GridCard {...item} />;
+          return <GridCard key={i} {...item} />;
         })}
       </div>
       {/* <LayoutGrid cards={} /> */}

@@ -1,4 +1,5 @@
 "use client";
+import { type CarouselApi } from "@/components/ui/carousel";
 import {
   Carousel,
   CarouselContent,
@@ -9,6 +10,7 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function Featured() {
   const list: { image: string; link: string[] }[] = [
@@ -50,15 +52,31 @@ export default function Featured() {
       ],
     },
   ];
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap() + 1);
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1);
+    });
+  }, [api]);
 
   return (
     <section className="flex w-full flex-col items-center justify-center gap-6">
       <span>As featured on</span>
       <Carousel
+        setApi={setApi}
         plugins={[
           Autoplay({
             delay: 1500,
-            stopOnInteraction: false,
           }),
         ]}
         className="w-full max-w-[900px] px-10"
@@ -68,6 +86,7 @@ export default function Featured() {
           {list.map((e, i) => {
             return (
               <CarouselItem
+                key={i}
                 onClick={(a) => {
                   e.link.forEach((item) => {
                     window.open(item, "_blank");
@@ -83,6 +102,28 @@ export default function Featured() {
           })}
         </CarouselContent>
       </Carousel>
+      <div className="flex w-full max-w-[600px] items-center justify-center gap-2 py-2">
+        {/* Slide {current} of {count} */}
+        {new Array(count + 1).fill(0, 1, count + 1).map((e, index) => {
+          return (
+            <div
+              onClick={() => {
+                api?.scrollTo(index - 1);
+              }}
+              key={index}
+              className="flex h-6 basis-1/12 items-center justify-center"
+            >
+              <div
+                style={{
+                  backgroundColor:
+                    current === index ? "#F9B897" : "rgba(0,0,0,0.1)",
+                }}
+                className="h-1 w-full rounded-md"
+              />
+            </div>
+          );
+        })}
+      </div>
     </section>
   );
 }
