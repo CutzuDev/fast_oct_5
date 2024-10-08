@@ -2,6 +2,7 @@ import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { SparklesCore } from "@/components/ui/sparkles";
 import Image from "next/image";
+import Link from "next/link";
 export default function Hero() {
   return (
     <section className="relative flex min-h-screen w-full flex-col items-center justify-start">
@@ -14,7 +15,9 @@ export default function Hero() {
           leak to the public.
         </span>
         <div className="mt-4 flex items-center justify-center gap-2 md:gap-4">
-          <Button size={"xl"}>Join us now</Button>
+          <Link href={"https://whop.com/bandarsbounties/"}>
+            <Button size={"xl"}>Join Now</Button>
+          </Link>
           <Button
             size={"xl"}
             className="border-0 shadow-lg"

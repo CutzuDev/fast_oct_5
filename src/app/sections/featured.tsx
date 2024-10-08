@@ -23,10 +23,7 @@ export default function Featured() {
     },
     {
       image: "dexerto",
-      link: [
-        "https://www.tiktok.com/@dexerto/video/7297292911199210784",
-        "https://m.youtube.com/watch?v=dcjuJAT5_5U",
-      ],
+      link: ["https://www.tiktok.com/@dexerto/video/7297292911199210784"],
     },
     {
       image: "firstsportz",
@@ -68,6 +65,10 @@ export default function Featured() {
     api.on("select", () => {
       setCurrent(api.selectedScrollSnap() + 1);
     });
+
+    // Add event listeners
+
+    // Cleanup event listeners on unmount
   }, [api]);
 
   return (
@@ -77,6 +78,8 @@ export default function Featured() {
         setApi={setApi}
         plugins={[
           AutoScroll({
+            stopOnMouseEnter: true,
+            startDelay: 0,
             playOnInit: true,
           }),
         ]}
@@ -88,6 +91,12 @@ export default function Featured() {
             return (
               <CarouselItem
                 key={i}
+                onMouseLeave={(e) => {
+                  api?.plugins().autoScroll.play(0);
+                }}
+                onTouchEnd={(e) => {
+                  api?.plugins().autoScroll.play(0);
+                }}
                 onClick={(a) => {
                   e.link.forEach((item) => {
                     window.open(item, "_blank");
@@ -103,8 +112,7 @@ export default function Featured() {
           })}
         </CarouselContent>
       </Carousel>
-      <div className="flex w-full max-w-[600px] items-center justify-center gap-2 py-2 lg:hidden">
-        {/* Slide {current} of {count} */}
+      {/* <div className="flex w-full max-w-[600px] items-center justify-center gap-2 py-2 lg:hidden">
         {new Array(count + 1).fill(0, 1, count + 1).map((e, index) => {
           return (
             <div
@@ -124,7 +132,7 @@ export default function Featured() {
             </div>
           );
         })}
-      </div>
+      </div> */}
     </section>
   );
 }

@@ -3,6 +3,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CheckboxIcon } from "@radix-ui/react-icons";
 import { Check, CheckCheckIcon, X } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 type cardProps = {
   name: string;
@@ -113,7 +114,10 @@ function ChoiceCard({
         {price && <span className="mt-2 text-4xl font-semibold">${price}</span>}
         <span>billed monthly</span>
         <span className="mt-6 w-3/5 text-sm">{description}</span>
-        <Button className="mt-6 w-full">{buttonText}</Button>
+
+        <Link href={"https://whop.com/bandarsbounties/"}>
+          <Button className="mt-6 w-full">{buttonText}</Button>
+        </Link>
       </div>
       <div className="mt-6 flex flex-col items-start justify-center gap-4">
         {list.map((e, i) => {

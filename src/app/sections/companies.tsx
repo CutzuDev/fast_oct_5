@@ -11,6 +11,7 @@ import AutoScroll from "embla-carousel-auto-scroll";
 import Autoplay from "embla-carousel-autoplay";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Companies() {
@@ -77,7 +78,9 @@ export default function Companies() {
               members are instantly alerted to mistakes during product changes
               or listings. Always first, never second.
             </span>
-            <Button className="px-8">Get started</Button>
+            <Link href={"https://whop.com/bandarsbounties/"}>
+              <Button className="px-8">Get started</Button>
+            </Link>
           </div>
           <div className="hidden flex-wrap items-center justify-center gap-8 lg:flex">
             {[...list.slice(7, 11), ...list.slice(13, 17)].map((e, i) => {
@@ -107,7 +110,9 @@ export default function Companies() {
           setApi={setApi}
           plugins={[
             AutoScroll({
+              stopOnMouseEnter: true,
               playOnInit: true,
+              startDelay: 0,
             }),
           ]}
           className="mt-10 flex w-full max-w-[600px] lg:hidden"
@@ -116,7 +121,15 @@ export default function Companies() {
           <CarouselContent>
             {[...list.slice(3, 6), list[11], list[17]].map((e, i) => {
               return (
-                <CarouselItem className="flex basis-1/3 items-center justify-center">
+                <CarouselItem
+                  onMouseLeave={(e) => {
+                    api?.plugins().autoScroll.play(0);
+                  }}
+                  onTouchEnd={(e) => {
+                    api?.plugins().autoScroll.play(0);
+                  }}
+                  className="flex basis-1/3 items-center justify-center"
+                >
                   <div className="relative aspect-[21/9] h-16">
                     <Image src={`/rlogo/${e}.svg`} fill alt="" />
                   </div>
@@ -125,8 +138,7 @@ export default function Companies() {
             })}
           </CarouselContent>
         </Carousel>
-        <div className="flex w-full max-w-[600px] items-center justify-center gap-2 py-2 lg:hidden">
-          {/* Slide {current} of {count} */}
+        {/* <div className="flex w-full max-w-[600px] items-center justify-center gap-2 py-2 lg:hidden">
           {new Array(count + 1).fill(0, 1, count + 1).map((e, index) => {
             return (
               <div
@@ -146,7 +158,7 @@ export default function Companies() {
               </div>
             );
           })}
-        </div>
+        </div> */}
         <div className="hidden flex-col items-center justify-center gap-8 lg:flex">
           {[...list.slice(3, 6), list[11], list[17]].map((e, i) => {
             return (

@@ -27,7 +27,13 @@ export default function Nav() {
           <Link href={"https://whop.com/bandarsbounties/"}>
             <Button>Join Now</Button>
           </Link>
-          <Button variant={"secondary"}>Submit deal</Button>
+          <Link
+            href={
+              "https://x.com/messages/compose?recipient_id=930825172365410304"
+            }
+          >
+            <Button variant={"secondary"}>Submit deal</Button>
+          </Link>
         </div>
       </div>
     </nav>

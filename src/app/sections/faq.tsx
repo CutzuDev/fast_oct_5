@@ -6,6 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Link from "next/link";
 
 const list: { title: string; description: string }[] = [
   {
@@ -66,7 +67,13 @@ export default function FAQ() {
               Have information on a pricing error? Share it with us and earn
               money, products, or exclusive group access.
             </span>
-            <Button>Submit a bounty</Button>
+            <Link
+              href={
+                "https://x.com/messages/compose?recipient_id=930825172365410304"
+              }
+            >
+              <Button>Submit a bounty</Button>
+            </Link>
           </div>
           <div className="flex max-w-[400px] flex-col items-start justify-center gap-4 rounded-md border border-neutral-800/10 p-4">
             <div className="relative aspect-square h-10">
