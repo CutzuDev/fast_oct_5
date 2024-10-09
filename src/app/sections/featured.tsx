@@ -7,7 +7,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
 import AutoScroll from "embla-carousel-auto-scroll";
 
 import Image from "next/image";
@@ -72,7 +71,7 @@ export default function Featured() {
   }, [api]);
 
   return (
-    <section className="flex w-full flex-col items-center justify-center gap-6">
+    <section className="flex w-full flex-col items-center justify-center gap-2 md:gap-6">
       <span>As featured on</span>
       <Carousel
         setApi={setApi}
@@ -83,7 +82,7 @@ export default function Featured() {
             playOnInit: true,
           }),
         ]}
-        className="w-full max-w-[900px] px-10"
+        className="w-full max-w-[900px]"
         opts={{ loop: true }}
       >
         <CarouselContent>
@@ -102,7 +101,7 @@ export default function Featured() {
                     window.open(item, "_blank");
                   });
                 }}
-                className="pl-10 hover:cursor-pointer md:basis-1/2 lg:basis-1/3"
+                className="basis-[40%] pl-10 hover:cursor-pointer md:basis-1/2 lg:basis-1/3"
               >
                 <div className="relative aspect-video w-full object-contain">
                   <Image className="" alt="" src={`/aso/${e.image}.svg`} fill />
