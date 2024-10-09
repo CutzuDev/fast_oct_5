@@ -1,9 +1,34 @@
+"use client";
 import { Card, LayoutGrid } from "@/components/ui/layout-grid";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import {
+  Carousel,
+  CarouselApi,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import AutoScroll from "embla-carousel-auto-scroll";
+import { useEffect, useState } from "react";
 
 export default function Grid() {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap() + 1);
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1);
+    });
+  }, [api]);
   return (
     <section className="relative mt-20 flex w-full flex-col items-center justify-center gap-10 p-4 md:mt-40">
       <div id="reviews" className="absolute -top-[10%] left-0" />
@@ -18,10 +43,47 @@ export default function Grid() {
           our expert guidance and unique opportunities.
         </span>
       </div>
-      <div className="grid w-full max-w-[1200px] grid-cols-1 grid-rows-4 gap-4 md:grid-cols-3">
+      <div className="hidden w-full max-w-[1200px] grid-cols-1 grid-rows-4 gap-4 md:grid md:grid-cols-3">
         {gridCardList.map((item, i) => {
           return <GridCard key={i} {...item} />;
         })}
+      </div>
+      <div className="grid w-full max-w-[1200px] grid-cols-1 grid-rows-4 md:hidden md:grid-cols-3">
+        <GridCard {...gridCardList[2]} />
+        <Carousel
+          setApi={setApi}
+          plugins={[
+            AutoScroll({
+              stopOnMouseEnter: true,
+              playOnInit: true,
+              startDelay: 0,
+            }),
+          ]}
+          className="h-full mt-5"
+          opts={{ loop: true, align: "center" }}
+        >
+          <CarouselContent>
+            {[
+              ...gridCardList.slice(0, 2),
+              ...gridCardList.slice(4, gridCardList.length),
+            ].map((item, i) => {
+              return (
+                <CarouselItem
+                  onMouseLeave={(e) => {
+                    api?.plugins().autoScroll.play(0);
+                  }}
+                  onTouchEnd={(e) => {
+                    api?.plugins().autoScroll.play(0);
+                  }}
+                  className="flex h-full basis-[100%] items-center justify-center"
+                >
+                  <GridCard key={i} {...item} />
+                </CarouselItem>
+              );
+            })}
+          </CarouselContent>
+        </Carousel>
+        <GridCard {...gridCardList[3]} />
       </div>
       {/* <LayoutGrid cards={} /> */}
     </section>
@@ -68,7 +130,7 @@ const gridCardList: gridCardProps[] = [
     content: (
       <>
         <Link
-          href={""}
+          href={"https://x.com/bandarsbounties/status/1719872099211428150"}
           target="_blank"
           className="flex h-full flex-col items-center justify-between"
         >
@@ -93,7 +155,7 @@ const gridCardList: gridCardProps[] = [
         />
       </div>
     ),
-    className: "relative row-span-2 text-white -z-[11]",
+    className: "relative row-start-4 row-span-2 text-white -z-[11]",
   },
   {
     content: (
@@ -102,7 +164,7 @@ const gridCardList: gridCardProps[] = [
           "https://www.sportskeeda.com/mma/news-dillon-danistrolls-bone-heads-ksi-logan-paul-prime-hydration-brand-accidentallygives-away-250-000-boxes-products-free"
         }
         target="_blank"
-        className="flex h-full w-full flex-col items-start justify-between"
+        className="flex w-full flex-col items-start justify-between md:h-full"
       >
         <svg
           className=""
@@ -118,7 +180,7 @@ const gridCardList: gridCardProps[] = [
             fill="red"
           />
         </svg>
-        <span className="mb-16 pr-4 text-xl font-semibold">
+        <span className="mb-16 pr-4 text-lg font-semibold md:text-xl">
           "Dillon Danis trolls "bone heads" KSI and Logan Paul as PRIME
           hydration brand accidentally gives away over 250,000 boxes of products
           for free"
@@ -127,7 +189,7 @@ const gridCardList: gridCardProps[] = [
     ),
     user: { name: "hibbster32", date: "Member since November 2023" },
     image: "/testimonial/profilepicture5.png",
-    className: "row-span-2",
+    className: "row-span-2  row-start-1 md:row-start-auto",
   },
   {
     content: (

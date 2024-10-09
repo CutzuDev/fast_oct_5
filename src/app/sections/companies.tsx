@@ -119,7 +119,39 @@ export default function Companies() {
           opts={{ loop: true, align: "center" }}
         >
           <CarouselContent>
-            {[...list.slice(3, 6), list[11], list[17]].map((e, i) => {
+            {list.slice(0, 9).map((e, i) => {
+              return (
+                <CarouselItem
+                  onMouseLeave={(e) => {
+                    api?.plugins().autoScroll.play(0);
+                  }}
+                  onTouchEnd={(e) => {
+                    api?.plugins().autoScroll.play(0);
+                  }}
+                  className="flex basis-1/3 items-center justify-center"
+                >
+                  <div className="relative aspect-[21/9] h-16">
+                    <Image src={`/rlogo/${e}.svg`} fill alt="" />
+                  </div>
+                </CarouselItem>
+              );
+            })}
+          </CarouselContent>
+        </Carousel>
+        <Carousel
+          setApi={setApi}
+          plugins={[
+            AutoScroll({
+              stopOnMouseEnter: true,
+              playOnInit: true,
+              startDelay: 500,
+            }),
+          ]}
+          className="mt-10 flex w-full max-w-[600px] lg:hidden"
+          opts={{ loop: true, align: "center" }}
+        >
+          <CarouselContent>
+            {list.slice(9, list.length).map((e, i) => {
               return (
                 <CarouselItem
                   onMouseLeave={(e) => {
