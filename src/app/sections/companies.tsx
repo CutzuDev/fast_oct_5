@@ -54,7 +54,7 @@ export default function Companies() {
   }, [api]);
 
   return (
-    <section className="relative mt-40 flex w-full flex-col items-center justify-center p-4">
+    <section className="relative mt-20 flex w-full flex-col items-center justify-center p-4">
       <div id="sitelist" className="absolute -top-[10%] left-0" />
 
       <div className="flex w-full flex-col items-center justify-center lg:flex-row lg:items-start">

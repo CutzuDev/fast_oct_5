@@ -30,7 +30,7 @@ export default function Grid() {
     });
   }, [api]);
   return (
-    <section className="relative mt-20 flex w-full flex-col items-center justify-center gap-10 p-4 md:mt-40">
+    <section className="relative mt-20 flex w-full flex-col items-center justify-center gap-10 p-4 ">
       <div id="reviews" className="absolute -top-[10%] left-0" />
 
       <div className="flex flex-col items-center justify-center gap-4 text-center">

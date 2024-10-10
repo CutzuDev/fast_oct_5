@@ -43,7 +43,7 @@ const list: { title: string; description: string }[] = [
 
 export default function FAQ() {
   return (
-    <section className="relative mt-20 flex w-full flex-col items-center justify-center gap-10 p-4 md:mt-40">
+    <section className="relative mt-20 flex w-full flex-col items-center justify-center gap-10 p-4 ">
       <div id="faq" className="absolute -top-[10%] left-0" />
       <div className="flex flex-col items-center justify-center gap-8 text-center">
         <span className="max-w-[900px] text-5xl font-bold lg:text-7xl">
