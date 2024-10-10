@@ -59,7 +59,7 @@ export default function Grid() {
               startDelay: 0,
             }),
           ]}
-          className="h-full mt-5"
+          className="mt-5 h-full"
           opts={{ loop: true, align: "center" }}
         >
           <CarouselContent>
@@ -155,7 +155,7 @@ const gridCardList: gridCardProps[] = [
         />
       </div>
     ),
-    className: "relative row-start-4 row-span-2 text-white -z-[11]",
+    className: "relative row-start-4 md:row-start-auto row-span-2 text-white -z-[11]",
   },
   {
     content: (
