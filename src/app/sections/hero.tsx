@@ -91,12 +91,13 @@ export default function Hero() {
               stopOnMouseEnter: true,
               playOnInit: true,
               startDelay: 0,
+              direction: "backward",
             }),
           ]}
-          className="z-10 h-full w-full"
+          className="z-10 h-full w-full max-w-[900px] md:max-w-full"
           opts={{ loop: true, align: "center" }}
         >
-          <CarouselContent className="flex h-full items-center justify-center">
+          <CarouselContent>
             {list.map((item, i) => {
               return (
                 <CarouselItem
