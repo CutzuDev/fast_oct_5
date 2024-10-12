@@ -30,7 +30,7 @@ export default function Grid() {
     });
   }, [api]);
   return (
-    <section className="relative mt-20 flex w-full flex-col items-center justify-center gap-10 p-4 ">
+    <section className="relative mt-20 flex w-full flex-col items-center justify-center gap-10 p-4">
       <div id="reviews" className="absolute -top-[10%] left-0" />
 
       <div className="flex flex-col items-center justify-center gap-4 text-center">
@@ -134,8 +134,10 @@ const gridCardList: gridCardProps[] = [
           target="_blank"
           className="flex h-full flex-col items-center justify-between"
         >
-          <span className="w-full text-3xl font-bold">bandar's bounties</span>
-          <span className="mb-10 w-full text-xl font-semibold">
+          <span className="w-full text-xl font-bold md:text-3xl">
+            bandar's bounties
+          </span>
+          <span className="mb-10 w-full font-semibold md:text-xl">
             "KSI x Logan Paul's Prime Hydration Brand just accidentally gave
             away 250,283 boxes of PRIME Hydration Sticks for FREE. 100% OFF."
           </span>
@@ -155,7 +157,8 @@ const gridCardList: gridCardProps[] = [
         />
       </div>
     ),
-    className: "relative row-start-4 md:row-start-auto row-span-2 text-white -z-[11]",
+    className:
+      "relative row-start-4 md:row-start-auto row-span-2 text-white -z-[11]",
   },
   {
     content: (

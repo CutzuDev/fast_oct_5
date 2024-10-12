@@ -114,21 +114,23 @@ function ChoiceCard({
         {price && <span className="mt-2 text-4xl font-semibold">${price}</span>}
         <span>billed monthly</span>
         <span className="mt-6 w-3/5 text-sm">{description}</span>
-
         <Link href={"https://whop.com/bandarsbounties/"}>
-          <Button className="mt-6 w-full">{buttonText}</Button>
+          <Button className="mb-4 mt-6 w-full">{buttonText}</Button>
         </Link>
       </div>
       <div className="mt-6 flex flex-col items-start justify-center gap-4">
         {list.map((e, i) => {
           return (
-            <div key={i} className="flex items-center justify-center gap-2">
+            <div key={i} className="flex items-start justify-start gap-2">
               {price ? (
-                <Check className="rounded-sm bg-green-200 p-1" size={22} />
+                <Check
+                  className="mt-0.5 rounded-sm bg-green-200 p-1"
+                  size={22}
+                />
               ) : (
-                <X className="rounded-sm bg-green-200 p-1" size={22} />
+                <X className="mt-0.5 rounded-sm bg-green-200 p-1" size={22} />
               )}
-              <span>{e}</span>
+              <span className="text-left">{e}</span>
             </div>
           );
         })}
