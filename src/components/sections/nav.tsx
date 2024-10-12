@@ -11,9 +11,7 @@ export default function Nav() {
             <div className="relative aspect-square w-6 brightness-0 grayscale">
               <Image alt="" fill src={"/testimonial/bandarbountiesicon.svg"} />
             </div>
-            <span className="mt-1 hidden font-bold lg:block">
-              bandar's bounties
-            </span>
+            <span className="mt-1 font-bold">bandar's bounties</span>
           </div>
           <ul className="hidden items-center justify-center gap-10 text-sm lg:flex">
             <Link href={"/#features"}>Features</Link>
@@ -28,6 +26,7 @@ export default function Nav() {
             <Button>Join Now</Button>
           </Link>
           <Link
+            className="hidden md:block"
             href={
               "https://x.com/messages/compose?recipient_id=930825172365410304"
             }

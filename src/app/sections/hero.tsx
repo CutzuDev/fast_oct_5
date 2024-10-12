@@ -42,11 +42,11 @@ export default function Hero() {
 
   return (
     <section className="relative flex min-h-screen w-full flex-col items-center justify-start">
-      <div className="z-[1] flex w-full flex-col items-center justify-center gap-6 p-4 pt-40">
-        <h1 className="max-w-[1200px] text-center text-5xl font-bold lg:text-8xl">
+      <div className="z-[1] flex w-full flex-col items-center justify-center gap-6 p-4 pt-20 md:pt-40">
+        <h1 className="max-w-[1200px] text-center text-4xl font-bold md:text-5xl lg:text-8xl">
           Make $1000/month through price mistakes
         </h1>
-        <span className="text-center text-xl">
+        <span className="px-5 text-center md:text-xl">
           Discover pricing mistakes, glitches & profit opportunities before they
           leak to the public.
         </span>
@@ -136,8 +136,13 @@ export default function Hero() {
           particleColor="#FFFFFF"
         />
       </div>
-      <div className="absolute left-[45%] top-[45%] z-[-100] flex h-[100vh] w-[100vw] -translate-x-1/2 -translate-y-1/2 items-center justify-center overflow-hidden opacity-75 blur-2xl">
-        <Image className="scale-150" src={"/hero/gradient.svg"} alt="" fill />
+      <div className="absolute left-[90%] top-[30%] z-[-100] flex h-[100vh] w-[200vw] -translate-x-1/2 -translate-y-1/2 items-center justify-center overflow-hidden opacity-75 blur-2xl md:left-[45%] md:top-[45%] md:w-[100vw]">
+        <Image
+          className="scale-[2] md:scale-150"
+          src={"/hero/gradient.svg"}
+          alt=""
+          fill
+        />
       </div>
     </section>
   );
