@@ -42,48 +42,51 @@ export default function Hero() {
 
   return (
     <section className="relative flex min-h-screen w-full flex-col items-center justify-start">
-      <div className="z-[1] flex w-full flex-col items-center justify-center gap-6 p-4 pt-20 md:pt-40">
-        <h1 className="max-w-[1200px] text-center text-4xl font-bold md:text-5xl lg:text-8xl">
-          Make $1000/month through price mistakes
-        </h1>
-        <span className="px-5 text-center md:text-xl">
-          Discover pricing mistakes, glitches & profit opportunities before they
-          leak to the public.
-        </span>
-        <div className="mt-4 flex items-center justify-center gap-2 md:gap-4">
-          <Link href={"https://whop.com/bandarsbounties/"}>
-            <Button size={"xl"}>Join Now</Button>
-          </Link>
-          <Button
-            size={"xl"}
-            className="border-0 shadow-lg"
-            variant={"secondary"}
-          >
-            Learn more
-          </Button>
-        </div>
-        <div className="flex flex-wrap items-center justify-center gap-4">
-          <div className="flex items-center justify-center">
-            <Avatar className="-mx-2">
-              <AvatarImage src="/users/user1.png" />
-            </Avatar>
-            <Avatar className="-mx-2">
-              <AvatarImage src="/users/user2.png" />
-            </Avatar>
-            <Avatar className="-mx-2">
-              <AvatarImage src="/users/user3.png" />
-            </Avatar>
-            <Avatar className="-mx-2">
-              <AvatarImage src="/users/user4.png" />
-            </Avatar>
-            <Avatar className="-mx-2">
-              <AvatarImage src="/users/user5.png" />
-            </Avatar>
-          </div>
-          <span className="mb-1 text-sm">
-            The World's #1 Source for Pricing Errors
+      <div className="z-[1] flex w-full flex-col items-center justify-center gap-6 pt-20 md:pt-40">
+        <div className="flex w-full flex-col items-center justify-center gap-6 p-4">
+          <h1 className="max-w-[1200px] text-center text-4xl font-bold md:text-5xl lg:text-8xl">
+            Make $1000/month through price mistakes
+          </h1>
+          <span className="px-5 text-center md:text-xl">
+            Discover pricing mistakes, glitches & profit opportunities before
+            they leak to the public.
           </span>
+          <div className="mt-4 flex items-center justify-center gap-2 md:gap-4">
+            <Link href={"https://whop.com/bandarsbounties/"}>
+              <Button size={"xl"}>Join Now</Button>
+            </Link>
+            <Button
+              size={"xl"}
+              className="border-0 shadow-lg"
+              variant={"secondary"}
+            >
+              Learn more
+            </Button>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <div className="flex items-center justify-center">
+              <Avatar className="-mx-2">
+                <AvatarImage src="/users/user1.png" />
+              </Avatar>
+              <Avatar className="-mx-2">
+                <AvatarImage src="/users/user2.png" />
+              </Avatar>
+              <Avatar className="-mx-2">
+                <AvatarImage src="/users/user3.png" />
+              </Avatar>
+              <Avatar className="-mx-2">
+                <AvatarImage src="/users/user4.png" />
+              </Avatar>
+              <Avatar className="-mx-2">
+                <AvatarImage src="/users/user5.png" />
+              </Avatar>
+            </div>
+            <span className="mb-1 text-sm">
+              The World's #1 Source for Pricing Errors
+            </span>
+          </div>
         </div>
+
         <Carousel
           setApi={setApi}
           plugins={[
