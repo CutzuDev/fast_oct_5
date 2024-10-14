@@ -68,7 +68,7 @@ export default function Future() {
     });
   }, [api]);
   return (
-    <section className="relative mt-10 flex w-full flex-col items-center justify-center gap-10 p-4 md:mt-40">
+    <section className="relative mt-10 flex w-full flex-col items-center justify-center gap-10 p-4 md:mt-20">
       <div id="features" className="absolute -top-[10%] left-0" />
       <div className="flex flex-col items-center justify-center gap-4 text-center">
         <span className="max-w-[900px] text-4xl font-bold lg:text-7xl">
@@ -112,11 +112,8 @@ export default function Future() {
         <CarouselContent>
           {list.map((e, i) => {
             return (
-              <CarouselItem className="basis-[100%]">
-                <div
-                  key={i}
-                  className="flex w-full flex-col items-start justify-center gap-2 rounded-md border border-neutral-800/10 p-4"
-                >
+              <CarouselItem key={i} className="basis-[100%]">
+                <div className="flex w-full flex-col items-start justify-center gap-2 rounded-md border border-neutral-800/10 p-4">
                   <div className="relative aspect-square h-10">
                     <Image fill alt="" src={`/features/${e.image}.png`} />
                   </div>

@@ -110,13 +110,14 @@ export default function Hero() {
             {list.map((item, i) => {
               return (
                 <CarouselItem
+                  key={i}
                   onMouseLeave={(e) => {
                     api?.plugins().autoScroll.play(0);
                   }}
                   onTouchEnd={(e) => {
                     api?.plugins().autoScroll.play(0);
                   }}
-                  className="flex h-full basis-3/4 items-center justify-center md:basis-1/4"
+                  className="flex h-full basis-3/4 items-center justify-center md:basis-[22%]"
                 >
                   <img
                     alt=""

@@ -70,6 +70,7 @@ export default function Grid() {
             ].map((item, i) => {
               return (
                 <CarouselItem
+                  key={i}
                   onMouseLeave={(e) => {
                     api?.plugins().autoScroll.play(0);
                   }}
@@ -78,7 +79,7 @@ export default function Grid() {
                   }}
                   className="flex h-full basis-[100%] items-center justify-center"
                 >
-                  <GridCard key={i} {...item} />
+                  <GridCard {...item} />
                 </CarouselItem>
               );
             })}

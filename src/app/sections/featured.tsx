@@ -71,7 +71,7 @@ export default function Featured() {
   }, [api]);
 
   return (
-    <section className="mt-10 flex w-full flex-col items-center justify-center gap-2 md:mt-0 md:gap-6">
+    <section className="mt-10 md:mt-20 flex w-full flex-col items-center justify-center gap-4 md:gap-8">
       <span>As featured on</span>
       <Carousel
         setApi={setApi}
@@ -80,9 +80,10 @@ export default function Featured() {
             stopOnMouseEnter: true,
             startDelay: 0,
             playOnInit: true,
+            speed: 1,
           }),
         ]}
-        className="w-full max-w-[900px]"
+        className="w-full max-w-[900px] md:max-w-full"
         opts={{ loop: true }}
       >
         <CarouselContent>
@@ -101,9 +102,9 @@ export default function Featured() {
                     window.open(item, "_blank");
                   });
                 }}
-                className="basis-[40%] pl-10 hover:cursor-pointer md:basis-1/2 lg:basis-1/3"
+                className="basis-[40%] hover:cursor-pointer lg:basis-[20%]"
               >
-                <div className="relative aspect-video w-full object-contain">
+                <div className="relative aspect-video max-h-8 w-full object-contain">
                   <Image className="" alt="" src={`/aso/${e.image}.svg`} fill />
                 </div>
               </CarouselItem>

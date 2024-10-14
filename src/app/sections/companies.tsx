@@ -123,6 +123,7 @@ export default function Companies() {
             {list.slice(0, 9).map((e, i) => {
               return (
                 <CarouselItem
+                  key={i}
                   onMouseLeave={(e) => {
                     api?.plugins().autoScroll.play(0);
                   }}
@@ -157,6 +158,7 @@ export default function Companies() {
             {list.slice(9, list.length).map((e, i) => {
               return (
                 <CarouselItem
+                  key={i}
                   onMouseLeave={(e) => {
                     api?.plugins().autoScroll.play(0);
                   }}
@@ -197,7 +199,7 @@ export default function Companies() {
         <div className="hidden flex-col items-center justify-center gap-8 lg:flex">
           {[...list.slice(3, 6), list[11], list[17]].map((e, i) => {
             return (
-              <div className="relative aspect-[21/9] h-16">
+              <div key={i} className="relative aspect-[21/9] h-16">
                 <Image src={`/rlogo/${e}.svg`} fill alt="" />
               </div>
             );
