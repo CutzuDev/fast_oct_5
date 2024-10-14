@@ -113,6 +113,7 @@ export default function Companies() {
               stopOnMouseEnter: true,
               playOnInit: true,
               startDelay: 0,
+              speed: 0.9,
             }),
           ]}
           className="mt-10 flex w-full max-w-[600px] lg:hidden"
@@ -144,7 +145,9 @@ export default function Companies() {
             AutoScroll({
               stopOnMouseEnter: true,
               playOnInit: true,
+              speed: 0.9,
               startDelay: 500,
+              direction: "backward",
             }),
           ]}
           className="mt-10 flex w-full max-w-[600px] lg:hidden"

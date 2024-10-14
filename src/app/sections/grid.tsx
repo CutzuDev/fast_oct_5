@@ -57,6 +57,7 @@ export default function Grid() {
               stopOnMouseEnter: true,
               playOnInit: true,
               startDelay: 0,
+              speed: 1,
             }),
           ]}
           className="mt-5 h-full"
@@ -146,7 +147,7 @@ const gridCardList: gridCardProps[] = [
         <div className="absolute left-0 top-0 -z-10 h-full w-full rounded-lg bg-gradient-to-tr from-amber-500 from-10% via-pink-500 to-cyan-300 to-85%" />
       </>
     ),
-    user: { name: "Bandar's Bounties", date: "Member since November 2023" },
+    user: { name: "Bandar's Bounties", date: "See on X (former Twitter)" },
     imageCustom: (
       <div className="relative aspect-square w-10 rounded-md bg-white">
         <Image

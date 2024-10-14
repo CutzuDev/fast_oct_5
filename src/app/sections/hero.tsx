@@ -44,20 +44,25 @@ export default function Hero() {
     <section className="relative flex min-h-screen w-full flex-col items-center justify-start">
       <div className="z-[1] flex w-full flex-col items-center justify-center gap-6 pt-20 md:pt-40">
         <div className="flex w-full flex-col items-center justify-center gap-6 p-4">
-          <h1 className="max-w-[1200px] text-center text-4xl font-bold md:text-5xl lg:text-8xl">
+          <h1 className="max-w-[1200px] text-center text-5xl font-bold lg:text-8xl">
             Make $1000/month through price mistakes
           </h1>
           <span className="px-5 text-center md:text-xl">
             Discover pricing mistakes, glitches & profit opportunities before
             they leak to the public.
           </span>
-          <div className="mt-4 flex items-center justify-center gap-2 md:gap-4">
-            <Link href={"https://whop.com/bandarsbounties/"}>
-              <Button size={"xl"}>Join Now</Button>
+          <div className="mt-4 flex w-full items-center justify-center gap-2 md:gap-4">
+            <Link
+              className="w-1/2 md:w-auto"
+              href={"https://whop.com/bandarsbounties/"}
+            >
+              <Button className="w-full" size={"xl"}>
+                Join Now
+              </Button>
             </Link>
             <Button
               size={"xl"}
-              className="border-0 shadow-lg"
+              className="w-1/2 border-0 shadow-lg md:w-auto"
               variant={"secondary"}
             >
               Learn more
@@ -95,6 +100,7 @@ export default function Hero() {
               playOnInit: true,
               startDelay: 0,
               direction: "backward",
+              speed: 1,
             }),
           ]}
           className="z-10 h-full w-full max-w-[900px] md:max-w-full"
@@ -110,7 +116,7 @@ export default function Hero() {
                   onTouchEnd={(e) => {
                     api?.plugins().autoScroll.play(0);
                   }}
-                  className="flex h-full basis-[100%] items-center justify-center md:basis-1/4"
+                  className="flex h-full basis-3/4 items-center justify-center md:basis-1/4"
                 >
                   <img
                     alt=""

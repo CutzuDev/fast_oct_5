@@ -68,17 +68,18 @@ export default function Future() {
     });
   }, [api]);
   return (
-    <section className="relative mt-20 flex w-full flex-col items-center justify-center gap-10 p-4 md:mt-40">
+    <section className="relative mt-10 flex w-full flex-col items-center justify-center gap-10 p-4 md:mt-40">
       <div id="features" className="absolute -top-[10%] left-0" />
       <div className="flex flex-col items-center justify-center gap-4 text-center">
-        <span className="max-w-[900px] text-5xl font-bold lg:text-7xl">
+        <span className="max-w-[900px] text-4xl font-bold lg:text-7xl">
           Decide your future today and transform your life.
         </span>
-        <span className="max-w-[700px] text-sm">
+        <span className="max-w-[700px] md:text-sm">
           Your future is in your hands. Choose financial independence and
           fulfillment.
-          <br /> Make the right decision today and start building your dream
-          life. Take control and embrace your potential.
+          <br className="hidden md:inline" /> Make the right decision today and
+          start building your dream life. Take control and embrace your
+          potential.
         </span>
       </div>
       <div className="mt-10 hidden max-w-[1300px] flex-wrap items-stretch justify-center gap-4 lg:flex">
