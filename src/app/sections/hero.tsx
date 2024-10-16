@@ -44,7 +44,7 @@ export default function Hero() {
     <section className="relative flex min-h-screen w-full flex-col items-center justify-start">
       <div className="z-[1] flex w-full flex-col items-center justify-center gap-6 pt-20 md:pt-40">
         <div className="flex w-full flex-col items-center justify-center gap-6 p-4">
-          <h1 className="max-w-[1200px] text-center text-[2.8rem] font-bold leading-[1] md:text-6xl lg:text-8xl">
+          <h1 className="max-w-[1200px] text-center text-[2.5rem] font-bold leading-[1] md:text-6xl lg:text-8xl">
             Make $1000/month through price mistakes
           </h1>
           <span className="px-5 text-center text-lg md:text-xl">
