@@ -44,10 +44,10 @@ export default function Hero() {
     <section className="relative flex min-h-screen w-full flex-col items-center justify-start">
       <div className="z-[1] flex w-full flex-col items-center justify-center gap-6 pt-20 md:pt-40">
         <div className="flex w-full flex-col items-center justify-center gap-6 p-4">
-          <h1 className="max-w-[1200px] text-center text-[2.5rem] font-bold leading-[1] md:text-6xl lg:text-8xl">
+          <h1 className="max-w-[1200px] text-center text-[2.8rem] font-bold leading-[1] md:text-6xl lg:text-8xl">
             Make $1000/month through price mistakes
           </h1>
-          <span className="px-5 text-center md:text-xl">
+          <span className="px-5 text-center text-lg md:text-xl">
             Discover pricing mistakes, glitches & profit opportunities before
             they leak to the public.
           </span>
@@ -107,7 +107,7 @@ export default function Hero() {
           opts={{ loop: true, align: "center" }}
         >
           <CarouselContent>
-            {list.map((item, i) => {
+            {/* {list.map((item, i) => {
               return (
                 <CarouselItem
                   key={i}
@@ -117,7 +117,7 @@ export default function Hero() {
                   onTouchEnd={(e) => {
                     api?.plugins().autoScroll.play(0);
                   }}
-                  className="flex h-full basis-3/4 items-center justify-center md:basis-[22%]"
+                  className="flex h-full basis-3/4 items-center justify-center pl-8 md:basis-[22%]"
                 >
                   <img
                     alt=""
@@ -126,7 +126,92 @@ export default function Hero() {
                   />
                 </CarouselItem>
               );
-            })}
+            })} */}
+            <CarouselItem
+              onMouseLeave={(e) => {
+                api?.plugins().autoScroll.play(0);
+              }}
+              onTouchEnd={(e) => {
+                api?.plugins().autoScroll.play(0);
+              }}
+              className="flex h-full basis-3/4 items-center justify-center pl-4 md:basis-[22%]"
+            >
+              <img
+                alt=""
+                className="overflow-hidden rounded-md border border-neutral-800/20 shadow-lg"
+                src={`/hero/product-1.png`}
+              />
+            </CarouselItem>
+            <CarouselItem
+              onMouseLeave={(e) => {
+                api?.plugins().autoScroll.play(0);
+              }}
+              onTouchEnd={(e) => {
+                api?.plugins().autoScroll.play(0);
+              }}
+              className="flex h-full basis-3/4 flex-col items-center justify-center gap-4 md:basis-[22%]"
+            >
+              <img
+                alt=""
+                className="overflow-hidden rounded-md border border-neutral-800/20 shadow-lg"
+                src={`/hero/product-2.png`}
+              />
+              <img
+                alt=""
+                className="overflow-hidden rounded-md border border-neutral-800/20 shadow-lg"
+                src={`/hero/product-3.png`}
+              />
+            </CarouselItem>
+            <CarouselItem
+              onMouseLeave={(e) => {
+                api?.plugins().autoScroll.play(0);
+              }}
+              onTouchEnd={(e) => {
+                api?.plugins().autoScroll.play(0);
+              }}
+              className="flex h-full basis-3/4 flex-col items-center justify-center gap-4 md:basis-[22%]"
+            >
+              <img
+                alt=""
+                className="overflow-hidden rounded-md border border-neutral-800/20 shadow-lg"
+                src={`/hero/product-5.png`}
+              />
+              <img
+                alt=""
+                className="overflow-hidden rounded-md border border-neutral-800/20 shadow-lg"
+                src={`/hero/product-4.png`}
+              />
+            </CarouselItem>
+            <CarouselItem
+              onMouseLeave={(e) => {
+                api?.plugins().autoScroll.play(0);
+              }}
+              onTouchEnd={(e) => {
+                api?.plugins().autoScroll.play(0);
+              }}
+              className="flex h-full basis-3/4 items-center justify-center md:basis-[22%]"
+            >
+              <img
+                alt=""
+                className="overflow-hidden rounded-md border border-neutral-800/20 shadow-lg"
+                src={`/hero/product-6.png`}
+              />
+            </CarouselItem>
+            <CarouselItem
+              onMouseLeave={(e) => {
+                api?.plugins().autoScroll.play(0);
+              }}
+              onTouchEnd={(e) => {
+                api?.plugins().autoScroll.play(0);
+              }}
+              className="flex h-full basis-3/4 items-center justify-center md:basis-[22%]"
+            >
+              <img
+                alt=""
+                className="overflow-hidden rounded-md border border-neutral-800/20 shadow-lg"
+                src={`/hero/product-7.png`}
+              />
+            </CarouselItem>
           </CarouselContent>
         </Carousel>
       </div>
