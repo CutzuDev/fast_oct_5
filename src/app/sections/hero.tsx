@@ -149,7 +149,7 @@ export default function Hero() {
               onTouchEnd={(e) => {
                 api?.plugins().autoScroll.play(0);
               }}
-              className="flex h-full basis-3/4 flex-col items-center justify-center gap-4 md:basis-[22%]"
+              className="flex h-full basis-3/4 flex-col items-center justify-center gap-4 pl-4 md:basis-[22%]"
             >
               <img
                 alt=""
@@ -169,7 +169,22 @@ export default function Hero() {
               onTouchEnd={(e) => {
                 api?.plugins().autoScroll.play(0);
               }}
-              className="flex h-full basis-3/4 flex-col items-center justify-center gap-4 md:basis-[22%]"
+              className="flex h-full basis-3/4 items-center justify-center pl-4 md:basis-[22%]"
+            >
+              <img
+                alt=""
+                className="overflow-hidden rounded-md border border-neutral-800/20 shadow-lg"
+                src={`/hero/product-6.png`}
+              />
+            </CarouselItem>
+            <CarouselItem
+              onMouseLeave={(e) => {
+                api?.plugins().autoScroll.play(0);
+              }}
+              onTouchEnd={(e) => {
+                api?.plugins().autoScroll.play(0);
+              }}
+              className="flex h-full basis-3/4 flex-col items-center justify-center gap-4 pl-4 md:basis-[22%]"
             >
               <img
                 alt=""
@@ -189,12 +204,12 @@ export default function Hero() {
               onTouchEnd={(e) => {
                 api?.plugins().autoScroll.play(0);
               }}
-              className="flex h-full basis-3/4 items-center justify-center md:basis-[22%]"
+              className="flex h-full basis-3/4 items-center justify-center pl-4 md:basis-[22%]"
             >
               <img
                 alt=""
                 className="overflow-hidden rounded-md border border-neutral-800/20 shadow-lg"
-                src={`/hero/product-6.png`}
+                src={`/hero/product-7.png`}
               />
             </CarouselItem>
             <CarouselItem
@@ -204,12 +219,17 @@ export default function Hero() {
               onTouchEnd={(e) => {
                 api?.plugins().autoScroll.play(0);
               }}
-              className="flex h-full basis-3/4 items-center justify-center md:basis-[22%]"
+              className="flex h-full basis-3/4 flex-col items-center justify-center gap-4 pl-4 md:basis-[22%]"
             >
               <img
                 alt=""
                 className="overflow-hidden rounded-md border border-neutral-800/20 shadow-lg"
-                src={`/hero/product-7.png`}
+                src={`/hero/product-2.png`}
+              />
+              <img
+                alt=""
+                className="overflow-hidden rounded-md border border-neutral-800/20 shadow-lg"
+                src={`/hero/product-3.png`}
               />
             </CarouselItem>
           </CarouselContent>
