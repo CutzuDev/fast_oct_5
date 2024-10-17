@@ -136,11 +136,13 @@ export default function Hero() {
               }}
               className="flex h-full basis-[50%] items-center justify-center pl-4 md:basis-[22%]"
             >
-              <img
-                alt=""
-                className="overflow-hidden rounded-md border border-neutral-800/20 shadow-lg"
-                src={`/hero/product-1.png`}
-              />
+              <Link href={""}>
+                <img
+                  alt=""
+                  className="overflow-hidden rounded-md border border-neutral-800/20 shadow-lg"
+                  src={`/hero/product-1.png`}
+                />
+              </Link>
             </CarouselItem>
             <CarouselItem
               onMouseLeave={(e) => {
@@ -151,16 +153,20 @@ export default function Hero() {
               }}
               className="flex h-full basis-[50%] flex-col items-center justify-center gap-4 pl-4 md:basis-[22%]"
             >
-              <img
-                alt=""
-                className="overflow-hidden rounded-md border border-neutral-800/20 shadow-lg"
-                src={`/hero/product-2.png`}
-              />
-              <img
-                alt=""
-                className="overflow-hidden rounded-md border border-neutral-800/20 shadow-lg"
-                src={`/hero/product-3.png`}
-              />
+              <Link href={""}>
+                <img
+                  alt=""
+                  className="overflow-hidden rounded-md border border-neutral-800/20 shadow-lg"
+                  src={`/hero/product-2.png`}
+                />
+              </Link>
+              <Link href={""}>
+                <img
+                  alt=""
+                  className="overflow-hidden rounded-md border border-neutral-800/20 shadow-lg"
+                  src={`/hero/product-3.png`}
+                />
+              </Link>
             </CarouselItem>
             <CarouselItem
               onMouseLeave={(e) => {
@@ -171,11 +177,13 @@ export default function Hero() {
               }}
               className="flex h-full basis-[50%] items-center justify-center pl-4 md:basis-[22%]"
             >
-              <img
-                alt=""
-                className="overflow-hidden rounded-md border border-neutral-800/20 shadow-lg"
-                src={`/hero/product-6.png`}
-              />
+              <Link href={""}>
+                <img
+                  alt=""
+                  className="overflow-hidden rounded-md border border-neutral-800/20 shadow-lg"
+                  src={`/hero/product-6.png`}
+                />
+              </Link>
             </CarouselItem>
             <CarouselItem
               onMouseLeave={(e) => {
@@ -186,16 +194,20 @@ export default function Hero() {
               }}
               className="flex h-full basis-[50%] flex-col items-center justify-center gap-4 pl-4 md:basis-[22%]"
             >
-              <img
-                alt=""
-                className="overflow-hidden rounded-md border border-neutral-800/20 shadow-lg"
-                src={`/hero/product-5.png`}
-              />
-              <img
-                alt=""
-                className="overflow-hidden rounded-md border border-neutral-800/20 shadow-lg"
-                src={`/hero/product-4.png`}
-              />
+              <Link href={""}>
+                <img
+                  alt=""
+                  className="overflow-hidden rounded-md border border-neutral-800/20 shadow-lg"
+                  src={`/hero/product-5.png`}
+                />
+              </Link>
+              <Link href={""}>
+                <img
+                  alt=""
+                  className="overflow-hidden rounded-md border border-neutral-800/20 shadow-lg"
+                  src={`/hero/product-4.png`}
+                />
+              </Link>
             </CarouselItem>
             <CarouselItem
               onMouseLeave={(e) => {
@@ -206,11 +218,13 @@ export default function Hero() {
               }}
               className="flex h-full basis-[50%] items-center justify-center pl-4 md:basis-[22%]"
             >
-              <img
-                alt=""
-                className="overflow-hidden rounded-md border border-neutral-800/20 shadow-lg"
-                src={`/hero/product-7.png`}
-              />
+              <Link href={""}>
+                <img
+                  alt=""
+                  className="overflow-hidden rounded-md border border-neutral-800/20 shadow-lg"
+                  src={`/hero/product-7.png`}
+                />
+              </Link>
             </CarouselItem>
             <CarouselItem
               onMouseLeave={(e) => {
@@ -221,16 +235,20 @@ export default function Hero() {
               }}
               className="flex h-full basis-[50%] flex-col items-center justify-center gap-4 pl-4 md:basis-[22%]"
             >
-              <img
-                alt=""
-                className="overflow-hidden rounded-md border border-neutral-800/20 shadow-lg"
-                src={`/hero/product-2.png`}
-              />
-              <img
-                alt=""
-                className="overflow-hidden rounded-md border border-neutral-800/20 shadow-lg"
-                src={`/hero/product-3.png`}
-              />
+              <Link href={""}>
+                <img
+                  alt=""
+                  className="overflow-hidden rounded-md border border-neutral-800/20 shadow-lg"
+                  src={`/hero/product-2.png`}
+                />
+              </Link>
+              <Link href={""}>
+                <img
+                  alt=""
+                  className="overflow-hidden rounded-md border border-neutral-800/20 shadow-lg"
+                  src={`/hero/product-3.png`}
+                />
+              </Link>
             </CarouselItem>
           </CarouselContent>
         </Carousel>
