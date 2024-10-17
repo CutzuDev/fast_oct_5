@@ -57,7 +57,7 @@ export default function Hero() {
               href={"https://whop.com/bandarsbounties/"}
             >
               <Button className="w-full" size={"xl"}>
-                Join Now
+                Join us now
               </Button>
             </Link>
             <Button
