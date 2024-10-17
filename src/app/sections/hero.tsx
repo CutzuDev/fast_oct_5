@@ -117,7 +117,7 @@ export default function Hero() {
                   onTouchEnd={(e) => {
                     api?.plugins().autoScroll.play(0);
                   }}
-                  className="flex h-full basis-3/4 items-center justify-center pl-8 md:basis-[22%]"
+                  className="flex h-full basis-[65%] items-center justify-center pl-8 md:basis-[22%]"
                 >
                   <img
                     alt=""
@@ -134,7 +134,7 @@ export default function Hero() {
               onTouchEnd={(e) => {
                 api?.plugins().autoScroll.play(0);
               }}
-              className="flex h-full basis-3/4 items-center justify-center pl-4 md:basis-[22%]"
+              className="flex h-full basis-[65%] items-center justify-center pl-4 md:basis-[22%]"
             >
               <img
                 alt=""
@@ -149,7 +149,7 @@ export default function Hero() {
               onTouchEnd={(e) => {
                 api?.plugins().autoScroll.play(0);
               }}
-              className="flex h-full basis-3/4 flex-col items-center justify-center gap-4 pl-4 md:basis-[22%]"
+              className="flex h-full basis-[65%] flex-col items-center justify-center gap-4 pl-4 md:basis-[22%]"
             >
               <img
                 alt=""
@@ -169,7 +169,7 @@ export default function Hero() {
               onTouchEnd={(e) => {
                 api?.plugins().autoScroll.play(0);
               }}
-              className="flex h-full basis-3/4 items-center justify-center pl-4 md:basis-[22%]"
+              className="flex h-full basis-[65%] items-center justify-center pl-4 md:basis-[22%]"
             >
               <img
                 alt=""
@@ -184,7 +184,7 @@ export default function Hero() {
               onTouchEnd={(e) => {
                 api?.plugins().autoScroll.play(0);
               }}
-              className="flex h-full basis-3/4 flex-col items-center justify-center gap-4 pl-4 md:basis-[22%]"
+              className="flex h-full basis-[65%] flex-col items-center justify-center gap-4 pl-4 md:basis-[22%]"
             >
               <img
                 alt=""
@@ -204,7 +204,7 @@ export default function Hero() {
               onTouchEnd={(e) => {
                 api?.plugins().autoScroll.play(0);
               }}
-              className="flex h-full basis-3/4 items-center justify-center pl-4 md:basis-[22%]"
+              className="flex h-full basis-[65%] items-center justify-center pl-4 md:basis-[22%]"
             >
               <img
                 alt=""
@@ -219,7 +219,7 @@ export default function Hero() {
               onTouchEnd={(e) => {
                 api?.plugins().autoScroll.play(0);
               }}
-              className="flex h-full basis-3/4 flex-col items-center justify-center gap-4 pl-4 md:basis-[22%]"
+              className="flex h-full basis-[65%] flex-col items-center justify-center gap-4 pl-4 md:basis-[22%]"
             >
               <img
                 alt=""
